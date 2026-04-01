@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Parking System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-glow glow-1"></div>
+  <div class="background-glow glow-2"></div>
+
+  <div class="page">
+    <header class="hero">
+      <div>
+        <p class="tag">SMART CITY PROJECT</p>
+        <h1>🚗 Smart Parking System</h1>
+        <p class="subtitle">
+          A modern parking dashboard with login, live slot booking,
+          booking time, availability stats, and local storage support.
+        </p>
+      </div>
+    </header>
+
+    <section id="loginSection" class="login-card card">
+      <h2>Welcome Back</h2>
+      <p class="muted">Login to manage parking slots</p>
+
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+
+      <button id="loginBtn" type="button" class="primary-btn">Login</button>
+      <p id="message" class="message"></p>
+
+      <div class="demo-box">
+        <p><strong>Demo Login</strong></p>
+        <p>Username: admin</p>
+        <p>Password: 1234</p>
+      </div>
+    </section>
+
+    <section id="dashboardSection" class="dashboard hidden">
+      <div class="top-bar card">
+        <div>
+          <p class="tag">PARKING OVERVIEW</p>
+          <h2>Parking Dashboard</h2>
+        </div>
+        <button id="logoutBtn" type="button" class="logout-btn">Logout</button>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card glass">
+          <p>Total Slots</p>
+          <h3 id="totalCount">10</h3>
+        </div>
+        <div class="stat-card glass available-card">
+          <p>Available</p>
+          <h3 id="availableCount">0</h3>
+        </div>
+        <div class="stat-card glass occupied-card">
+          <p>Occupied</p>
+          <h3 id="occupiedCount">0</h3>
+        </div>
+      </div>
+
+      <div class="legend card">
+        <div class="legend-item">
+          <span class="legend-color available-legend"></span>
+          <span>Available</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color occupied-legend"></span>
+          <span>Occupied</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color click-legend"></span>
+          <span>Click any slot to toggle booking</span>
+        </div>
+      </div>
+
+      <div id="slotsContainer" class="slots-grid"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
